@@ -1,0 +1,13 @@
+.addContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.addWrapper {
+  width: 80%;
+}
+.addWrapper input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+}

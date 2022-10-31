@@ -1,0 +1,78 @@
+.footerContainer {
+  background-color: #b9def3;
+  padding: 15px 20px;
+  border-top: 1px solid #2f4858;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+}
+.filterButtonsContainer {
+  display: flex;
+  width: 25%;
+  align-items: center;
+  justify-content: space-between;
+}
+.taskButton {
+  cursor: pointer;
+  border: none;
+  background-color: #b9def3;
+  padding-bottom: 5px;
+  font-size: 20px;
+  color: #2f4858;
+}
+.taskButton.active {
+  border-bottom: 3px solid #f26419;
+  font-weight: bold;
+}
+.searchWrapper {
+  position: relative;
+  height: 55px;
+  max-width: 55px;
+  width: 100%;
+  margin: 0 40px;
+  border-radius: 6px;
+  background-color: #b9def3;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.searchWrapper .icon {
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  background-color: #b9def3;
+}
+.searchWrapper .icon svg {
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: translateY(-50%) rotate(90deg);
+}
+.searchWrapper .searchTask {
+  position: relative;
+  border: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  background-color: #b9def3;
+}
+.searchTask:focus {
+  border: none !important;
+}
+.searchWrapper.open {
+  padding: 0 15px 0 65px;
+  max-width: 350px;
+  border-bottom: 2px solid #f26419;
+}
+
+.searchWrapper.open .icon svg {
+  transform: translateY(-50%) rotate(0);
+}

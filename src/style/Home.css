@@ -1,0 +1,43 @@
+/*
+Charcoal : #2f4858
+Queen blue : #33658a
+Dark sky blue : #b9def3
+Honey yellow : #f6ae2d
+Orange red : #f26419
+*/
+.homeContainer {
+  margin: 20px;
+  border: 1px solid black;
+  color: rgb(86, 86, 86);
+}
+.homeWrapper {
+  width: 60%;
+  margin: auto;
+}
+.txt_center {
+  text-align: center;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+}
+input[type="text"]:focus {
+  border: 1px solid #b9def3;
+}
+.button {
+  background-color: #2f4858;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.button:hover {
+  background-color: #f6ae2d;
+  cursor: pointer;
+}
