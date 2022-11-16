@@ -1,5 +1,5 @@
 .footerContainer {
-  background-color: #b9def3;
+  background-color: #dde3e7;
   padding: 15px 20px;
   border-top: 1px solid #2f4858;
   display: flex;
@@ -12,11 +12,12 @@
   width: 25%;
   align-items: center;
   justify-content: space-between;
+  margin-left: auto;
 }
 .taskButton {
   cursor: pointer;
   border: none;
-  background-color: #b9def3;
+  background-color: #dde3e7;
   padding-bottom: 5px;
   font-size: 20px;
   color: #2f4858;
@@ -32,7 +33,7 @@
   width: 100%;
   margin: 0 40px;
   border-radius: 6px;
-  background-color: #b9def3;
+  background-color: #dde3e7;
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .searchWrapper .icon {
@@ -44,7 +45,7 @@
   width: 60px;
   display: flex;
   justify-content: center;
-  background-color: #b9def3;
+  background-color: #dde3e7;
 }
 .searchWrapper .icon svg {
   position: absolute;
@@ -52,6 +53,9 @@
   font-size: 30px;
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transform: translateY(-50%) rotate(90deg);
+}
+.searchWrapper .icon:hover svg {
+  fill: #f26419;
 }
 .searchWrapper .searchTask {
   position: relative;
@@ -61,8 +65,7 @@
   border-radius: 6px;
   font-size: 16px;
   font-weight: 400;
-  color: #333;
-  background-color: #b9def3;
+  background-color: #dde3e7;
 }
 .searchTask:focus {
   border: none !important;

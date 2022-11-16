@@ -1,6 +1,9 @@
 .listContainer {
   border-bottom: 1px solid #ccc;
-  padding: 15px 0px;
+  padding: 10px;
+}
+.listContainer:nth-child(odd) {
+  background: #dde3e7;
 }
 /* The container */
 .container {
@@ -31,9 +34,14 @@
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #f6ae2d52;
+  border: 1px solid #2f4858;
 }
-
+/* .listContainer:nth-child(odd) .checkmark {
+  background-color: #ffff;
+}
+.listContainer:nth-child(even) .checkmark {
+  background-color: #dde3e7;
+} */
 /* On mouse-over */
 .container:hover input ~ .checkmark {
   border: 1px solid #eca520;
@@ -42,7 +50,7 @@
 /* When the checkbox is checked */
 .container input:checked ~ .checkmark {
   background-color: white;
-  border: 1px solid #2f4858;
+  /* border: 1px solid #2f4858; */
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -62,7 +70,7 @@
   left: 9px;
   top: 5px;
   width: 5px;
-  height: 10px;
+  height: 15px;
   border: solid #f26419;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);

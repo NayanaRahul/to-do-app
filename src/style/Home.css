@@ -1,23 +1,27 @@
 /*
 Charcoal : #2f4858
-Queen blue : #33658a
+Light blue : #dde3e7
 Dark sky blue : #b9def3
 Honey yellow : #f6ae2d
 Orange red : #f26419
+Grey : #565656
 */
-.homeContainer {
-  margin: 20px;
-  border: 1px solid black;
-  color: rgb(86, 86, 86);
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
 }
-.homeWrapper {
-  width: 60%;
-  margin: auto;
-}
-.txt_center {
-  text-align: center;
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #c9cacc;
 }
 
+::-webkit-scrollbar-thumb {
+  background: #2f4858;
+  border-radius: 10px;
+}
+
+/* CUSTOM INPUT FIELD */
 input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -27,6 +31,27 @@ input[type="text"] {
 input[type="text"]:focus {
   border: 1px solid #b9def3;
 }
+
+.homeContainer {
+  margin: 20px;
+  border: 1px solid black;
+  color: #565656;
+}
+.homeWrapper {
+  width: 60%;
+  margin: auto;
+}
+.toDoListWrapper {
+  padding: 2px;
+  margin: 50px 0 50px 0;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.txt_center {
+  text-align: center;
+}
+
 .button {
   background-color: #2f4858;
   border: none;

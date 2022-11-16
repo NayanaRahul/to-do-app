@@ -1,14 +1,24 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "../style/AddToDo.css";
 
-function AddToDo() {
+function AddToDo({ setTaskList, taskList }) {
   const [task, setTask] = useState("");
+  const inputRef = useRef(null);
   const handleAddTask = () => {
     axios
       .post("http://localhost:3001/addtask", { task })
       .then((response) => {
-        console.log(response.data);
+        console.log("Task ID : ", response.data.taskId);
+        setTaskList([
+          {
+            id: response.data.taskdId,
+            task: task,
+            status: "ACTIVE",
+          },
+          ...taskList,
+        ]);
+        inputRef.current.value = "";
       })
       .catch((err) => {
         console.log(err);
@@ -22,6 +32,7 @@ function AddToDo() {
           name="to_do_text"
           placeholder="Add new task"
           onChange={(e) => setTask(e.target.value)}
+          ref={inputRef}
         />
       </div>
       <div>
