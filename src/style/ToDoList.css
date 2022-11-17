@@ -36,12 +36,7 @@
   width: 25px;
   border: 1px solid #2f4858;
 }
-/* .listContainer:nth-child(odd) .checkmark {
-  background-color: #ffff;
-}
-.listContainer:nth-child(even) .checkmark {
-  background-color: #dde3e7;
-} */
+
 /* On mouse-over */
 .container:hover input ~ .checkmark {
   border: 1px solid #eca520;

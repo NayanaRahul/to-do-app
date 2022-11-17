@@ -7,16 +7,13 @@ import ToDoList from "./ToDoList";
 
 function Home() {
   const [taskList, setTaskList] = useState([]);
-  const countRef = useRef(0);
   const toDoListWrapperRef = useRef();
 
   const getList = () => {
-    return axios
+    axios
       .get("http://localhost:3001/gettasks")
       .then((response) => {
         setTaskList(response.data.availableTasks);
-        countRef.current++;
-        return true;
       })
       .catch((err) => {
         console.log(err);
@@ -37,7 +34,6 @@ function Home() {
         {/* ADD TO DOs */}
         <AddToDo setTaskList={setTaskList} taskList={taskList} />
         {/* TO DOs LIST */}
-        <div>Number of changes: {countRef.current}</div>
         <div className="toDoListWrapper" ref={toDoListWrapperRef}>
           {taskList &&
             taskList.map((obj) => {
