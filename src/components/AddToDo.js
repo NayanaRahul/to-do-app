@@ -10,14 +10,17 @@ function AddToDo({ setTaskList, taskList }) {
       .post("http://localhost:3001/addtask", { task })
       .then((response) => {
         console.log("Task ID : ", response.data.taskId);
-        setTaskList([
-          {
-            id: response.data.taskdId,
-            task: task,
-            status: "ACTIVE",
-          },
-          ...taskList,
-        ]);
+        console.log("Task ID : ", response.data.message);
+        if (response.data.status) {
+          setTaskList([
+            {
+              id: response.data.taskdId,
+              task: task,
+              status: "ACTIVE",
+            },
+            ...taskList,
+          ]);
+        }
         inputRef.current.value = "";
       })
       .catch((err) => {
