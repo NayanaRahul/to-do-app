@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/ToDoList.css";
+import "../style/ToDoList.scss";
 import DeleteTask from "./DeleteTask";
 import EditTask from "./EditTask";
 

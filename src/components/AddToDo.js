@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
-import "../style/AddToDo.css";
+import "../style/AddToDo.scss";
 
 function AddToDo({ setTaskList, taskList }) {
   const [task, setTask] = useState("");

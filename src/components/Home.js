@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
-import "../style/Home.css";
+import "../style/Home.scss";
 import AddToDo from "./AddToDo";
 import Footer from "./Footer";
 import ToDoList from "./ToDoList";

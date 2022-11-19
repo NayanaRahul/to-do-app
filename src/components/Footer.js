@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../style/Footer.css";
+import "../style/Footer.scss";
 
 function Footer() {
   const [openSearch, setOpenSearch] = useState(false);
