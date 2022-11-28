@@ -1,16 +1,21 @@
 import axios from "axios";
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import "../style/AddToDo.scss";
+import { MyContext } from "./Home";
 
-function AddToDo({ setTaskList, taskList }) {
+/* { setTaskList, taskList } */
+function AddToDo() {
   const [task, setTask] = useState("");
+  const { value1 } = useContext(MyContext);
+  const [taskList, setTaskList] = value1;
+
   const inputRef = useRef(null);
   const handleAddTask = () => {
     axios
       .post("http://localhost:3001/addtask", { task })
       .then((response) => {
         console.log("Task ID : ", response.data.taskId);
-        console.log("Task ID : ", response.data.message);
+        console.log("Status : ", response.data.message);
         if (response.data.status) {
           setTaskList([
             {
