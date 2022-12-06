@@ -24,4 +24,16 @@ const seachTask = (searchText) => {
     });
 };
 
-export { getList, seachTask };
+/* Return Active Tasks count */
+const getActiveTaskCount = (searchText) => {
+  return axios
+    .get("http://localhost:3001/activeTaskCount")
+    .then((response) => {
+      return response.data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+export { getList, seachTask, getActiveTaskCount };
