@@ -20,6 +20,7 @@ function SearchTask({
         value={searchText}
         onChange={handleSearch}
         ref={searchInputRef}
+        autoComplete="off"
       />
       <div className="icon" onClick={handleClick}>
         <svg

@@ -14,9 +14,9 @@ function ToDoList({ data }) {
         </label>
       </div>
       {/* EDIT TASK */}
-      <EditTask />
+      <EditTask taskId={data.id} />
       {/* DELETE TASK */}
-      <DeleteTask />
+      <DeleteTask taskId={data.id} />
     </div>
   );
 }
