@@ -41,6 +41,7 @@ function AddToDo() {
           placeholder="Add new task"
           onChange={(e) => setTask(e.target.value)}
           ref={inputRef}
+          autoComplete="off"
         />
       </div>
       <div>

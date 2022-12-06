@@ -18,7 +18,6 @@ function Home() {
       .then((response) => {
         setFlag(true);
         setTaskList(response.availableTasks);
-        console.log("first");
         let filteredArray = [...taskList];
         filteredArray = filteredArray.filter((obj) => {
           let item = obj.task.toLowerCase();
@@ -46,9 +45,9 @@ function Home() {
         }}
       >
         <div className="homeWrapper">
-          {/* ADD TO DOs */}
+          {/* ADD TO-DOs */}
           <AddToDo />
-          {/* TO DOs LIST */}
+          {/* TO-DOs LIST */}
           <div className="toDoListWrapper">
             {filteredTaskList &&
               filteredTaskList.map((obj) => {
