@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { deleteTask } from "../api";
+import { MyContext } from "./Home";
 
-function DeleteTask() {
+function DeleteTask({ taskId }) {
+  const { value2 } = useContext(MyContext);
+  const [filteredTaskList, setFilteredTaskList] = value2;
+  const handleDeleteTask = () => {
+    deleteTask(taskId)
+      .then((response) => {
+        if (response.status) {
+          let filteredArray = [...filteredTaskList];
+          filteredArray = filteredArray.filter((obj) => {
+            return obj.id != taskId;
+          });
+          setFilteredTaskList(filteredArray);
+        } else {
+          console.log(response.message);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
-    <div className="deleteTask">
+    <div className="deleteTask" onClick={handleDeleteTask}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
