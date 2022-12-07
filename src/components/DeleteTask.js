@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { deleteTask } from "../api";
 import { MyContext } from "./Home";
 
@@ -11,7 +11,7 @@ function DeleteTask({ taskId }) {
         if (response.status) {
           let filteredArray = [...filteredTaskList];
           filteredArray = filteredArray.filter((obj) => {
-            return obj.id != taskId;
+            return obj.id !== taskId;
           });
           setFilteredTaskList(filteredArray);
         } else {

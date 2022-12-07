@@ -1,6 +1,6 @@
 import React from "react";
 
-function EditTask() {
+function EditTask({ taskId }) {
   return (
     <div className="editTask">
       <svg

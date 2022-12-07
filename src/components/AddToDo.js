@@ -3,7 +3,6 @@ import React, { useContext, useRef, useState } from "react";
 import "../style/AddToDo.scss";
 import { MyContext } from "./Home";
 
-/* { setTaskList, taskList } */
 function AddToDo() {
   const [task, setTask] = useState("");
   const { value1 } = useContext(MyContext);

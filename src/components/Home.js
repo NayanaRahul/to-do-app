@@ -51,7 +51,7 @@ function Home() {
           <div className="toDoListWrapper">
             {filteredTaskList &&
               filteredTaskList.map((obj) => {
-                return <ToDoList data={obj} />;
+                return <ToDoList data={obj} key={obj.id} />;
               })}
           </div>
         </div>
