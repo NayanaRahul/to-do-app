@@ -3,7 +3,7 @@ import "../style/ToDoList.scss";
 import DeleteTask from "./DeleteTask";
 import EditTask from "./EditTask";
 
-function ToDoList({ data }) {
+function ToDoList({ data, handleEditTask, handleDeleteTask }) {
   return (
     <div className="listContainer" key={data.id}>
       <div>
@@ -14,9 +14,18 @@ function ToDoList({ data }) {
         </label>
       </div>
       {/* EDIT TASK */}
-      <EditTask taskId={data.id} />
+      <EditTask
+        handleEditTask={() => {
+          handleEditTask(data);
+        }}
+      />
       {/* DELETE TASK */}
-      <DeleteTask taskId={data.id} />
+
+      <DeleteTask
+        handleDeleteTask={() => {
+          handleDeleteTask(data.id);
+        }}
+      />
     </div>
   );
 }
