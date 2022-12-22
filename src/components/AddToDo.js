@@ -5,20 +5,21 @@ import { MyContext } from "./Home";
 
 function AddToDo() {
   const [task, setTask] = useState("");
-  const { value1 } = useContext(MyContext);
+  const { value1, value2 } = useContext(MyContext);
   const [taskList, setTaskList] = value1;
+  const [filteredTaskList, setFilteredTaskList] = value2;
 
   const inputRef = useRef(null);
   const handleAddTask = () => {
     axios
       .post("http://localhost:3001/addtask", { task })
       .then((response) => {
-        console.log("Task ID : ", response.data.taskId);
-        console.log("Status : ", response.data.message);
+        /* console.log("Task ID : ", response.data.taskId);
+        console.log("Status : ", response.data.message); */
         if (response.data.status) {
-          setTaskList([
+          setFilteredTaskList([
             {
-              id: response.data.taskdId,
+              id: response.data.taskId,
               task: task,
               status: "ACTIVE",
             },
@@ -44,7 +45,7 @@ function AddToDo() {
         />
       </div>
       <div>
-        <button className="button" onClick={handleAddTask}>
+        <button className="button_primary" onClick={handleAddTask}>
           Add
         </button>
       </div>
