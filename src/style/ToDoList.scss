@@ -7,9 +7,6 @@
     background: #dde3e7;
   }
 }
-/* .listContainer:nth-child(odd) {
-  background: #dde3e7;
-} */
 
 .editTask,
 .deleteTask {
@@ -73,7 +70,6 @@
 /* When the checkbox is checked */
 .container input:checked ~ .checkmark {
   background-color: white;
-  /* border: 1px solid #2f4858; */
 }
 
 /* Show the checkmark when checked */

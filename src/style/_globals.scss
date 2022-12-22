@@ -1,0 +1,65 @@
+/*
+Charcoal : #2f4858
+Light blue : #dde3e7
+Dark sky blue : #b9def3
+Honey yellow : #f6ae2d
+Orange red : #f26419
+Grey : #565656
+*/
+
+$primary1: #2f4858;
+$primary2: #f26419;
+$primary3: #565656;
+
+.block {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+.error_msg {
+  color: red;
+}
+.success_msg {
+  color: green;
+}
+/* BUTTONS */
+.button {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 12px 20px;
+}
+
+.button_primary {
+  @extend .button;
+  background-color: $primary1;
+  color: white;
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.button_secondary {
+  @extend .button;
+  background-color: #c9cacc;
+  color: #000;
+  :hover {
+    cursor: pointer;
+  }
+}
+
+/* MODAL LAYOUT */
+.layoutWrapper {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}

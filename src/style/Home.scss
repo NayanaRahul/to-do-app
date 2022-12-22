@@ -1,11 +1,4 @@
-/*
-Charcoal : #2f4858
-Light blue : #dde3e7
-Dark sky blue : #b9def3
-Honey yellow : #f6ae2d
-Orange red : #f26419
-Grey : #565656
-*/
+@import "globals";
 
 /* CUSTOM SCROLLBAR */
 ::-webkit-scrollbar {
@@ -17,7 +10,7 @@ Grey : #565656
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2f4858;
+  background: $primary1;
   border-radius: 10px;
 }
 
@@ -35,7 +28,7 @@ input[type="text"]:focus {
 .homeContainer {
   margin: 20px;
   border: 1px solid black;
-  color: #565656;
+  color: $primary3;
 }
 .homeWrapper {
   width: 60%;
@@ -52,17 +45,10 @@ input[type="text"]:focus {
   text-align: center;
 }
 
-.button {
-  background-color: #2f4858;
-  border: none;
-  color: white;
-  padding: 12px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 4px;
-}
-.button:hover {
-  background-color: #f6ae2d;
-  cursor: pointer;
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: space-between;
+  margin: 10px 0 10px auto;
 }
