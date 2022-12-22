@@ -18,7 +18,7 @@ function Footer() {
     setOpenSearch(!openSearch);
   };
   useEffect(() => {
-    console.log("---IN useEffect FOOTER---");
+    //console.log("---IN useEffect FOOTER---");
     getActiveTaskCount()
       .then((response) => {
         setActiveTaskCount(response.activeTaskCount);
