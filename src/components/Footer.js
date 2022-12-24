@@ -6,10 +6,11 @@ import { getActiveTaskCount } from "../api";
 
 function Footer() {
   const [openSearch, setOpenSearch] = useState(false);
-  const { value3 } = useContext(MyContext);
+  const { value3, value5 } = useContext(MyContext);
   const [searchText, setSearchText] = value3;
   const searchInputRef = useRef();
-  const [activeTaskCount, setActiveTaskCount] = useState(0);
+  const [activeTaskCount, setActiveTaskCount] = value5;
+
   const handleClick = (e) => {
     if (!openSearch) {
       setSearchText("");
@@ -18,7 +19,6 @@ function Footer() {
     setOpenSearch(!openSearch);
   };
   useEffect(() => {
-    //console.log("---IN useEffect FOOTER---");
     getActiveTaskCount()
       .then((response) => {
         setActiveTaskCount(response.activeTaskCount);
@@ -26,7 +26,7 @@ function Footer() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [activeTaskCount]);
 
   return (
     <div className="footerContainer">

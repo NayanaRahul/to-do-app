@@ -3,7 +3,7 @@ import "../style/Home.scss";
 import AddToDo from "./AddToDo";
 import Footer from "./Footer";
 import ToDoList from "./ToDoList";
-import { getList, updateTask, deleteTask } from "../api";
+import { getList, updateTask, deleteTask, getActiveTaskCount } from "../api";
 
 import UpdateTaskModal from "./UpdateTaskModal";
 import ModalLayout from "./ModalLayout";
@@ -26,6 +26,7 @@ function Home() {
     text: "",
     type: "",
   });
+  const [activeTaskCount, setActiveTaskCount] = useState(0);
 
   /* ON DELETE BUTTON CLICK */
   const handleDeleteTask = (id) => {
@@ -39,6 +40,13 @@ function Home() {
           });
           setTaskList(filteredArray);
           setFilteredTaskList(filteredArray);
+          getActiveTaskCount()
+            .then((response) => {
+              setActiveTaskCount(response.activeTaskCount);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
         } else {
           console.log(response.message);
         }
@@ -163,6 +171,7 @@ function Home() {
           value2: [filteredTaskList, setFilteredTaskList],
           value3: [searchText, setSearchText],
           value4: [showUpdateTaskModal, setShowUpdateTaskModal],
+          value5: [activeTaskCount, setActiveTaskCount],
         }}
       >
         <div className="homeWrapper">
